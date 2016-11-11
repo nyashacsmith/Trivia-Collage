@@ -1,47 +1,52 @@
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-/**
- * Created by cierralewis on 11/10/16.
- */
+
 
 public class Controller implements ActionListener {
-    static public class Category {
-        public String category;
-        public Question[] questions;
-        public Category(){
-            category = " ";
-            questions = new Question[25];
+   public String category;
+    public class Category {
+        String category;
+        Question[] questions = new Question[25];
+        public Category(String c, Question[] q) {
+            category = c;
+            questions = q;
+        }
+        public void addQuestionArray(Question qu, int i) {questions[i] = qu;}
+        public Question[] getQuestions(){return questions;}
+    }
+
+
+        public class Question {
+            public String question;
+            public Answers[] answers = new Answers[4];
+        public Question(String q, Answers[] a) {
+             question = q;
+             answers = a;
+        }
+
+
+        public void addAnswerArray(Answers a, int index){answers[index] = a;}
+        public Answers[] getAnswers(){
+          return answers;
         }
 
     }
-   static public class Question {
-        public Question(){
-            String question = " ";
-            Answers[] answers = new Answers[4];
 
-        }
-
-
-//        public String getQuestion() {
-//            return question;
-//        }
-//        public void setQuestion(String q) {
-//            question = q;
-//        }
-
-    }
-    public class Answers extends JButton {
-        public Answers(){
-            String answer = " ";
-            boolean right = false;
+        public class Answers extends JButton {
+            public String answer = " ";
+            public boolean right = false;
+            public Answers(String a, boolean b) {
+            answer = a;
+            boolean right = b;
         }
 
     }
+
     @Override
     public void actionPerformed(ActionEvent e) {
-
 
     }
 }
