@@ -21,3 +21,12 @@ public class Question {
     }
 
  }
+
+//public class Question {
+//    public String question;
+//    public Answers[] answers = new Answers[4];
+//    public Question(String q, Answers[] a) {
+//        question = q;
+//        answers = a;
+//    }
+//}
