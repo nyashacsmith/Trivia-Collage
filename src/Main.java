@@ -1,5 +1,4 @@
 import java.util.HashMap;
-import java.util.Locale;
 import java.util.Map;
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -10,10 +9,7 @@ public class Main extends JFrame implements ActionListener{
 
     Controller.Category d1 = new Controller.Category();
 
-
-
-
-    JFrame frame;
+        JFrame frame;
         JPanel home;
 
         JButton start;
